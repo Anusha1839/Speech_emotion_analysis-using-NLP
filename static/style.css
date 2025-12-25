@@ -1,0 +1,169 @@
+/* 🌟 General Styling */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(148, 249, 254); /* ✅ Background color */
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 📌 Main Container (Now Wider) */
+.container {
+  background-color: #cdf4f4; /* ✅ Box color */
+  width: 95%; /* 🔹 Increased width */
+  max-width: 1600px; /* 🔹 Wider max width */
+  height: 85vh; /* ✅ Keeps good height proportion */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 50px 50px 100px rgba(5, 242, 251, 0.973);
+  padding: 50px;
+}
+
+/* 📌 Title */
+h1 {
+  font-size: 3rem;
+  color: rgb(17, 16, 16);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* 📌 Buttons */
+button {
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 8px;
+}
+
+/* 📌 Dropdown & Inputs */
+select, input {
+  font-size: 1.5rem;
+  padding: 15px;
+  margin: 8px;
+}
+
+/* 📌 Results Section */
+#result {
+  width: 90%; /* 🔹 Increased width */
+  max-width: 1100px; /* 🔹 More space */
+  text-align: left;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* ✅ Ensures spacing between elements */
+}
+
+/* 📌 Emotion Details */
+.emotion-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* 📌 Labels (Text, Emoji, Audio) */
+.emotion-label {
+  font-size: 2rem; /* ✅ Bigger Labels */
+  font-weight: bold;
+  min-width: 120px; /* 🔹 Ensures alignment */
+  text-align: left;
+}
+
+/* 📌 Emotion Text */
+#emotionText {
+  font-size: 2.5rem;
+  color: black;
+  font-weight: bold;
+}
+
+/* 📌 Emoji Styling */
+#emotionEmoji {
+  font-size: 5rem;
+}
+
+/* 📌 Audio Section */
+#emotionAudio {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 10px;
+}
+
+/* 📌 Processing Animation */
+#processing {
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* 📌 Responsive Design */
+@media (max-width: 600px) {
+  .container {
+      width: 100%;
+      height: auto;
+      padding: 20px;
+  }
+
+  h1 {
+      font-size: 2.5rem;
+  }
+
+  button, select, input {
+      font-size: 2rem;
+  }
+
+  #emotionText {
+      font-size: 2.8rem;
+  }
+
+  #emotionEmoji {
+      font-size: 4.5rem;
+  }
+
+  #emotionAudio {
+      max-width: 200px;
+  }
+
+  #result {
+      padding: 20px;
+  }
+}
+
+/* 🌟 Emoji Animation - Floating Effect */
+@keyframes floatEmoji {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); } /* Moves up */
+  100% { transform: translateY(0px); } /* Moves back */
+}
+
+/* 🌟 Emoji Animation - Bouncing Effect */
+@keyframes bounceEmoji {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); } /* Higher bounce */
+}
+
+/* 🌟 Emoji Animation - Shaking Effect */
+@keyframes shakeEmoji {
+  0% { transform: translateX(0px); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0px); }
+}
+
+/* 📌 Apply the Animation to the Emoji */
+#emotionEmoji {
+  font-size: 5rem;
+  display: inline-block;
+  animation: floatEmoji 2s ease-in-out infinite; /* 🔹 Change to 'bounceEmoji' or 'shakeEmoji' if you want */
+}
