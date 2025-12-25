@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emotion Recognition from Audio</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="icon" href="static/favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <h1>🎤 Speech Emotion Analyzer</h1>
+        <select id="option" onchange="toggleInput()">
+            <option value="upload">Upload an audio file</option>
+            <option value="record">Record audio</option>
+        </select>
+
+        <!-- Upload Section -->
+        <div id="uploadSection">
+            <input type="file" id="audioFile" accept=".wav,.mp3">
+            <button onclick="uploadAudio()">🔍 Detect Emotion</button>
+            <button onclick="clearUpload()">❌ Clear</button>
+        </div>
+
+        <!-- Record Section -->
+        <div id="recordSection" style="display: none;">
+            <button id="recordButton" onclick="startRecording()">🎙️ Record</button>
+            <button id="stopButton" onclick="stopRecording()" disabled>⏹️ Stop</button>
+            <button id="predictButton" onclick="predictRecordedAudio()" disabled>🔍 Detect Emotion</button>
+            <button id="clearRecordButton" onclick="clearRecording()" disabled>❌ Clear</button>
+            <audio id="recordedAudio" controls style="display: none;"></audio>
+        </div>
+
+        <!-- Processing Animation -->
+        <div id="processing" style="display: none;">
+            <h3>Processing... ⏳</h3>
+        </div>
+
+        <!-- Emotion Result -->
+        <div id="result" style="display: none;">
+            <h2>Detected Emotion</h2>
+            <p><strong>Text :</strong> <span id="emotionText"></span></p>
+            <p><strong>Emoji :</strong> <span id="emotionEmoji"></span></p>
+            <p><strong>Audio :<audio id="emotionAudio" controls></audio></strong></p>
+        </div>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
