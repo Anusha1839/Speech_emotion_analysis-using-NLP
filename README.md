@@ -61,7 +61,8 @@
 + CSS
 + JavaScript
 + VS Code
-+ Jupyter Notebook
++ google colab
+  
 
 # Hardware Requirements
 - Processor: Intel i7 or AMD Ryzen 7 or higher
