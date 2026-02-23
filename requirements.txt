@@ -1,0 +1,9 @@
+flask
+tensorflow==2.13.1
+numpy
+librosa
+noisereduce
+gtts
+speechrecognition
+h5py
+soundfile
