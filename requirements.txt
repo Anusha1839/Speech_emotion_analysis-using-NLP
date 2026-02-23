@@ -1,9 +1,10 @@
 flask
+gunicorn
 tensorflow==2.13.1
 numpy
 librosa
 noisereduce
 gtts
 speechrecognition
-h5py
 soundfile
+h5py
